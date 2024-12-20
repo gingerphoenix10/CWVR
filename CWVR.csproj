@@ -51,6 +51,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Assembly-CSharp.def.dll</HintPath>
+    </Reference>
     <Reference Include="ModalAssembly">
       <HintPath>..\Content Warning_Data\Managed\ModalAssembly.dll</HintPath>
     </Reference>

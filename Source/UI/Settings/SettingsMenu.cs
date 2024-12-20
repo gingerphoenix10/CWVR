@@ -303,6 +303,7 @@ public class SettingsMenu : MonoBehaviour
     
     internal void DestroySettings()
     {
+        Logger.LogInfo("It's callin it");
         foreach (var obj in objects)
             Destroy(obj);
 
@@ -383,7 +384,7 @@ public class SettingsMenu : MonoBehaviour
         // Do cleanup tasks and apply settings
     }
 }
-/*
+
 [CWVRPatch(CWVRPatchTarget.Universal)]
 [HarmonyPatch]
 internal static class SettingsMenuPatches
@@ -413,4 +414,3 @@ internal static class SettingsMenuPatches
         }
     }
 }
-*/

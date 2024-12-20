@@ -3,6 +3,8 @@ using System.Collections;
 using CWVR.Assets;
 using Microsoft.MixedReality.Toolkit.Experimental.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SpatialTracking;
@@ -154,4 +156,5 @@ public class MainMenu : MonoBehaviour
         
         xrOrigin.eulerAngles = new Vector3(0, 180 - pose.rotation.eulerAngles.y, 0);
     }
+
 }

@@ -8,7 +8,10 @@ using BepInEx;
 using BepInEx.Bootstrap;
 using CWVR.Assets;
 using CWVR.Patches;
+using Photon.Chat.UtilityScripts;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 using UnityEngine.XR.Management;
@@ -76,6 +79,14 @@ public class Plugin : BaseUnityPlugin
         // Perform global VR setup here
 
         Flags |= Flags.VR;
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (EventSystem.current.GetComponent<InputSystemUIInputModule>()) EventSystem.current.GetComponent<InputSystemUIInputModule>().enabled = false;
     }
 
     private bool LoadEarlyRuntimeDependencies()

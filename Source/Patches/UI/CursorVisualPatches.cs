@@ -6,7 +6,7 @@ using UnityEngine;
 using static HarmonyLib.AccessTools;
 
 namespace CWVR.Patches.UI;
-/*
+
 [CWVRPatch]
 [HarmonyPatch]
 internal static class CursorVisualPatches
@@ -38,4 +38,4 @@ internal static class CursorVisualPatches
             )
             .InstructionEnumeration();
     }
-}*/
+}
