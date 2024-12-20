@@ -26,6 +26,9 @@ This means that updates to Content Warning itself can very easily break the mod,
 
 However, this fork is continuation of the project, allowing VR support on newer versions of Content Warning. This project is also planned to be uploaded to the official [Content Warning Workshop](https://steamcommunity.com/app/2881650/workshop/) eventually, if permission from DaXcess is given.
 
+> **Warning**
+> This project is not yet complete, and is still in development. Building this will most likely fail for you as I've modified some other files, and wouldn't work correctly in-game yet either.
+
 # Install from source
 
 To install the mod from the source code, you will first have to compile the mod. Instructions for this are available in [COMPILING.md](COMPILING.md).
