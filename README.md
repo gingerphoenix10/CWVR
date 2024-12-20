@@ -1,22 +1,30 @@
 # Content Warning VR Mod
 
 [![Thunderstore Version](https://img.shields.io/thunderstore/v/DaXcess/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/DaXcess/CWVR)
-[![GitHub Version](https://img.shields.io/github/v/release/DaXcess/CWVR?style=for-the-badge&logo=github)](https://github.com/DaXcess/CWVR/releases/latest)
+[![GitHub Version](https://img.shields.io/github/v/release/gingerphoenix10/CWVR?style=for-the-badge&logo=github)](https://github.com/gingerphoenix10/CWVR/releases/latest)
 [![Thunderstore Downloads](https://img.shields.io/thunderstore/dt/DaXcess/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/DaXcess/CWVR)
-[![GitHub Downloads](https://img.shields.io/github/downloads/DaXcess/CWVR/total?style=for-the-badge&logo=github)](https://github.com/DaXcess/CWVR/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/gingerphoenix10/CWVR/total?style=for-the-badge&logo=github)](https://github.com/gingerphoenix10/CWVR/releases/latest)
 <br/>
-[![Release Build](https://img.shields.io/github/actions/workflow/status/DaXcess/CWVR/build-release.yaml?branch=main&style=for-the-badge&label=RELEASE)](https://github.com/DaXcess/CWVR/actions/workflows/build-release.yaml)
-[![Debug Build](https://img.shields.io/github/actions/workflow/status/DaXcess/CWVR/build-debug.yaml?branch=dev&style=for-the-badge&label=DEBUG)](https://github.com/DaXcess/CWVR/actions/workflows/build-debug.yaml)
+[![Release Build](https://img.shields.io/github/actions/workflow/status/gingerphoenix10/CWVR/build-release.yaml?branch=main&style=for-the-badge&label=RELEASE)](https://github.com/gingerphoenix10/CWVR/actions/workflows/build-release.yaml)
+[![Debug Build](https://img.shields.io/github/actions/workflow/status/DaXcess/gingerphoenix10/build-debug.yaml?branch=dev&style=for-the-badge&label=DEBUG)](https://github.com/gingerphoenix10/CWVR/actions/workflows/build-debug.yaml)
 
-CW // VR is a [BepInEx](https://docs.bepinex.dev/) mod that adds fully fledged, 6DOF VR support into Content Warning, including fully motion controlled hands.
+CW // VR is a [BepInEx](https://docs.bepinex.dev/) mod developed by [DaXcess](https://github.com/DaXcess) that adds fully fledged, 6DOF VR support into Content Warning, including fully motion controlled hands.
 
-This mod, just like my Lethal Company VR mod, is powered by Unity's OpenXR plugin, and is thereby compatible with a wide range of headsets and runtimes, like Oculus, Virtual Desktop, SteamVR and many more!
+This mod, just like his Lethal Company VR mod, is powered by Unity's OpenXR plugin, and is thereby compatible with a wide range of headsets and runtimes, like Oculus, Virtual Desktop, SteamVR and many more!
 
 ### Discord Server
 
 We have a dedicated section within the [Flat2VR Discord Server](https://discord.com/invite/ZFSCSDe)!
 
 Look for the [`#cw-join`](https://discord.com/channels/747967102895390741/1236717861653712896) channel to join the Content Warning VR section.
+
+# What is this fork?
+
+The original [CWVR](https://github.com/DaXcess/CWVR) mod was archived by DaXcess on 11th August 2024, meaning no more updates are being made to the project.
+
+This means that updates to Content Warning itself can very easily break the mod, and with no mod updates, would never be able to work again without downgrading.
+
+However, this fork is continuation of the project, allowing VR support on newer versions of Content Warning. This project is also planned to be uploaded to the official [Content Warning Workshop](https://steamcommunity.com/app/2881650/workshop/) eventually, if permission from DaXcess is given.
 
 # Install from source
 
