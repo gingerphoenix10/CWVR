@@ -36,7 +36,7 @@ jobs:
         
       - name: Upload NuGet package
         if: github.event_name == 'push'
-        run: dotnet nuget push bin/Release/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://nuget.daxcess.io/v3/index.json
+        run: dotnet nuget push bin/Release/*.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://gingerphoenix10.com/nuget/v3/index.json
 
       - name: Build CWVR
         run: dotnet build -c Release
