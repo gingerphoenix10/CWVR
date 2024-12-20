@@ -22,7 +22,6 @@
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
-    <PackageReference Include="CW.Zorro" Version="1.8.0" />
     <PackageReference Include="HBAO.Universal" Version="1.9.0-cw" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="PhotonUnityNetworking" Version="1.9.0-cw" />
@@ -52,10 +51,28 @@
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>Assembly-CSharp.def.dll</HintPath>
+      <HintPath>Refs\Assembly-CSharp.def.dll</HintPath>
     </Reference>
     <Reference Include="ModalAssembly">
       <HintPath>..\Content Warning_Data\Managed\ModalAssembly.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.ControllerSupport">
+      <HintPath>..\Content Warning_Data\Managed\Zorro.ControllerSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.Core.Runtime">
+      <HintPath>Refs\Zorro.Core.Runtime.def.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.PhotonUtility">
+      <HintPath>Refs\Zorro.PhotonUtility.def.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.Recorder">
+      <HintPath>Refs\Zorro.Recorder.def.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.Settings.Runtime">
+      <HintPath>Refs\Zorro.Settings.Runtime.def.dll</HintPath>
+    </Reference>
+    <Reference Include="Zorro.UI.Runtime">
+      <HintPath>..\Content Warning_Data\Managed\Zorro.UI.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
 

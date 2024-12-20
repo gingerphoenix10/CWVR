@@ -11,6 +11,7 @@ using HarmonyLib;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zorro.UI.Effects;
 using Object = UnityEngine.Object;
 
 namespace CWVR.UI.Settings;
@@ -39,14 +40,20 @@ public class SettingsMenu : MonoBehaviour
             return;
 
         // Create settings tab
-        var tabs = GetComponentInChildren<CW_TABS>();
+        /*var tabs = GetComponentInChildren<CW_TABS>();
+        Transform fade = Instantiate(tabs.transform.GetChild(2).Find("Selected")); //Didn't feel like extracting and remaking the AssetBundle
         var settingsTabObj = Instantiate(AssetManager.VRSettingsTab, tabs.transform);
         var settingsTab = settingsTabObj.GetComponent<CW_TAB>();
         var settingsCatTabVr = settingsTabObj.GetComponent<SettingCategoryTab>();
-        
-        settingsTab.hoverSound = hoverSound;
-        settingsTab.clickSound = clickSound;
-        settingsCatTabVr.settingsMenu = global::SettingsMenu.Instance;
+        fade.parent = settingsTabObj.transform;
+        fade.name = "Selected";
+        fade.localPosition = new Vector3(0, 0, 0);
+        settingsTab.FadeInEffect = fade.GetComponent<FadeInEffect>();
+
+        //settingsTab.hoverSound = hoverSound;
+        //settingsTab.clickSound = clickSound;
+        settingsCatTabVr.settingsMenu = global::SettingsMenu.Instance;         // New CW uses Enums for categories, and since I don't think we can add to an Enum, I'll just add these into Mods.*/
+
     }
     
     private GameObject[] objects = [];
@@ -86,7 +93,7 @@ public class SettingsMenu : MonoBehaviour
             var entry = enumUI.GetComponentInChildren<ConfigEntry>();
             runtimesDropdown = enumUI.GetComponentInChildren<TMP_Dropdown>();
 
-            text.text = "OpenXR Runtime";
+            text.text = "CWVR - OpenXR Runtime";
             entry.m_Category = "Internal";
             entry.m_Name = "OpenXRRuntimeFile";
 
@@ -120,7 +127,7 @@ public class SettingsMenu : MonoBehaviour
                     var dropdown = enumUI.GetComponentInChildren<TMP_Dropdown>();
                     var entry = enumUI.GetComponentInChildren<ConfigEntry>();
 
-                    text.text = Utils.PascalToLongString(name);
+                    text.text = "CWVR - "+Utils.PascalToLongString(name);
                     entry.m_Category = category;
                     entry.m_Name = name;
 
@@ -142,7 +149,7 @@ public class SettingsMenu : MonoBehaviour
                     var input = sliderUI.GetComponentInChildren<TMP_InputField>();
                     var entry = sliderUI.GetComponentInChildren<ConfigEntry>();
 
-                    text.text = Utils.PascalToLongString(name);
+                    text.text = "CWVR - "+Utils.PascalToLongString(name);
                     entry.m_Category = category;
                     entry.m_Name = name;
 
@@ -163,7 +170,7 @@ public class SettingsMenu : MonoBehaviour
                     var input = sliderUI.GetComponentInChildren<TMP_InputField>();
                     var entry = sliderUI.GetComponentInChildren<ConfigEntry>();
 
-                    text.text = Utils.PascalToLongString(name);
+                    text.text = "CWVR - "+Utils.PascalToLongString(name);
                     entry.m_Category = category;
                     entry.m_Name = name;
 
@@ -182,7 +189,7 @@ public class SettingsMenu : MonoBehaviour
                     var dropdown = boolUI.GetComponentInChildren<TMP_Dropdown>();
                     var entry = boolUI.GetComponentInChildren<ConfigEntry>();
                     
-                    text.text = Utils.PascalToLongString(name);
+                    text.text = "CWVR - " + Utils.PascalToLongString(name);
                     entry.m_Category = category;
                     entry.m_Name = name;
                     
@@ -393,14 +400,14 @@ internal static class SettingsMenuPatches
     [HarmonyPrefix]
     private static void BeforeShow(SettingCategory category)
     {
-        Object.FindObjectOfType<SettingsMenu>().DestroySettings();
+        if (Object.FindObjectOfType<SettingsMenu>()) Object.FindObjectOfType<SettingsMenu>().DestroySettings();
     }
 
     [HarmonyPatch(typeof(global::SettingsMenu), nameof(global::SettingsMenu.Show))]
     [HarmonyPostfix]
     private static void AfterShow(global::SettingsMenu __instance, SettingCategory category)
     {
-        if ((int)category == 3)
+        if ((int)category == 4)
             Object.FindObjectOfType<SettingsMenu>().DisplayVRSettings(__instance.m_settingsContainer);
 
         if (category is SettingCategory.Controls && VRSession.InVR)

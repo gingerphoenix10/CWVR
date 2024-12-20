@@ -8,6 +8,7 @@ using BepInEx;
 using BepInEx.Bootstrap;
 using CWVR.Assets;
 using CWVR.Patches;
+using CWVR.Player;
 using Photon.Chat.UtilityScripts;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -71,6 +72,9 @@ public class Plugin : BaseUnityPlugin
         SceneManager.sceneLoaded += (scene, mode) =>
         {
             Logger.LogDebug($"Loaded scene: {scene.name}");
+            GameObject updateObject = new();
+            updateObject.name = "CWVR";
+            UpdateScript updateScript = updateObject.AddComponent<UpdateScript>();
         };
         
         if (disableVr || !InitializeVR())
@@ -80,13 +84,15 @@ public class Plugin : BaseUnityPlugin
 
         Flags |= Flags.VR;
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
-
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    class UpdateScript : MonoBehaviour
     {
-        if (EventSystem.current.GetComponent<InputSystemUIInputModule>()) EventSystem.current.GetComponent<InputSystemUIInputModule>().enabled = false;
+        // I didn't wanna do this, but I give up with this thing coming back
+        void Update()
+        {
+            if (EventSystem.current && EventSystem.current.GetComponent<InputSystemUIInputModule>()) EventSystem.current.GetComponent<InputSystemUIInputModule>().enabled = false;
+        }
     }
 
     private bool LoadEarlyRuntimeDependencies()
