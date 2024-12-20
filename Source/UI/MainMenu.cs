@@ -84,7 +84,6 @@ public class MainMenu : MonoBehaviour
                 new ModalOption("Reduced Motion Sickness", () => Plugin.Config.DisableRagdollCamera.Value = true)
             ], () => Plugin.Config.FirstTimeLaunch.Value = false);
         }
-
         StartCoroutine(DisableDoF());
         StartCoroutine(AutoRotate());
     }

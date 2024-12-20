@@ -22,6 +22,7 @@
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
+    <PackageReference Include="CommanderCat101.ContentSettings" Version="1.2.2" />
     <PackageReference Include="ContentWarning" Version="1.16.0" />
     <PackageReference Include="CW.Zorro" Version="1.8.0" />
     <PackageReference Include="HBAO.Universal" Version="1.9.0-cw" />
@@ -52,12 +53,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="ModalAssembly">
-      <HintPath>..\Content Warning_Data\Managed\ModalAssembly.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -70,9 +65,5 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Source\Compatibility\" />
   </ItemGroup>
 </Project>

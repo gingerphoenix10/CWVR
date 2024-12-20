@@ -383,7 +383,7 @@ public class SettingsMenu : MonoBehaviour
         // Do cleanup tasks and apply settings
     }
 }
-
+/*
 [CWVRPatch(CWVRPatchTarget.Universal)]
 [HarmonyPatch]
 internal static class SettingsMenuPatches
@@ -413,3 +413,4 @@ internal static class SettingsMenuPatches
         }
     }
 }
+*/

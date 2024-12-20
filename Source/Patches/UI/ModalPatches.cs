@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Reflection;
 using CWVR.Player;
 using HarmonyLib;
 using UnityEngine.UI;
@@ -16,7 +17,7 @@ internal static class ModalPatches
     /// <summary>
     /// Store previous buttons so that we don't accidentally count them towards the total buttons
     /// </summary>
-    [HarmonyPatch(typeof(Modal), nameof(Modal.ShowModal))]
+    [HarmonyPatch(typeof(Modal), "ShowModal")]
     [HarmonyPrefix]
     private static void BeforeShowModal(Modal __instance)
     {
@@ -29,7 +30,7 @@ internal static class ModalPatches
     /// <summary>
     /// Make sure every component of the modal UI is rendered on top
     /// </summary>
-    [HarmonyPatch(typeof(Modal), nameof(Modal.ShowModal))]
+    [HarmonyPatch(typeof(Modal), "ShowModal")]
     [HarmonyPostfix]
     private static void OnShowModal(Modal __instance)
     {
@@ -44,14 +45,15 @@ internal static class ModalPatches
         buttons[0].OnSelected();
     }
 
-    [HarmonyPatch(typeof(Modal), nameof(Modal.Update))]
+    [HarmonyPatch(typeof(Modal), "Update")]
     [HarmonyPostfix]
     private static void OnUpdate(Modal __instance)
     {
+        bool m_show = (bool)typeof(Modal).GetField("m_show", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(__instance);
         if (!VRSession.Instance)
             return;
         
-        if (!__instance.m_show)
+        if (!m_show)
             return;
 
         if (VRSession.Instance.Controls.ModalPress.PressedDown())

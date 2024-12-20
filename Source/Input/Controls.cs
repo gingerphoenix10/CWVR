@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
 using Axis2DControl = CWVR.Input.InputSystem.Axis2DControl;
@@ -46,10 +47,11 @@ public class Controls(InputSystem inputSystem)
 
     public void SampleInput(global::Player.PlayerInput input, global::Player.PlayerData data, global::Player player)
     {
+        bool m_show = (bool)typeof(Modal).GetField("m_show", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(Modal.Instance);
         input.ResetInput();
         input.movementInput = Vector2.zero;
 
-        if (Modal.Instance.m_show || EscapeMenu.Instance.Open)
+        if (m_show || EscapeMenu.Instance.Open)
             return;
 
         if (!player.HasLockedMovement())
@@ -95,15 +97,15 @@ public class Controls(InputSystem inputSystem)
         if (!player.HasLockedMovement() && !strangled)
         {
             input.jumpWasPressed = Jump.PressedDown();
-            input.jumpIsPressed = Jump.Pressed();
+            //input.jumpIsPressed = Jump.Pressed();
             input.crouchWasPressed = Crouch.PressedDown();
-            input.crouchIsPressed = Crouch.Pressed();
+            //input.crouchIsPressed = Crouch.Pressed();
         }
 
         if (!strangled)
         {
             input.interactWasPressed = Interact.PressedDown();
-            input.dropItemWasPressed = Drop.PressedDown();
+            //input.dropItemWasPressed = Drop.PressedDown();
             input.dropItemWasReleased = Drop.Released();
             input.dropItemIsPressed = Drop.Pressed();
         }
