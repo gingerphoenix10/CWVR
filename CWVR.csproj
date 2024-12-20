@@ -22,7 +22,6 @@
   <ItemGroup>
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
-    <PackageReference Include="ContentWarning" Version="1.16.0" />
     <PackageReference Include="CW.Zorro" Version="1.8.0" />
     <PackageReference Include="HBAO.Universal" Version="1.9.0-cw" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
