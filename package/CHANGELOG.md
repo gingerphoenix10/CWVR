@@ -1,4 +1,8 @@
-# 1.0.5 (Labeled 1.0.0 on Thunderstore)
+# 1.0.6
+- Fixed 1.0.4 being loaded as a dependency to 1.0.5 for some reason
+- Update README links
+
+# 1.0.5
 - Project now maintained by gingerphoenix10
 - Added support for Content Warning version 1.19.e
 
