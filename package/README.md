@@ -1,9 +1,9 @@
 # CW // VR
 
-[![Thunderstore Version](https://img.shields.io/thunderstore/v/gingerphoenix10/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/DaXcess/CWVR)
-[![GitHub Version](https://img.shields.io/github/v/release/gingerphoenix10/CWVR?style=for-the-badge&logo=github)](https://github.com/DaXcess/CWVR/releases/latest)
-[![Thunderstore Downloads](https://img.shields.io/thunderstore/dt/gingerphoenix10/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/DaXcess/CWVR)
-[![GitHub Downloads](https://img.shields.io/github/downloads/gingerphoenix10/CWVR/total?style=for-the-badge&logo=github)](https://github.com/DaXcess/CWVR/releases/latest)
+[![Thunderstore Version](https://img.shields.io/thunderstore/v/gingerphoenix10/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/gingerphoenix10/CWVR)
+[![GitHub Version](https://img.shields.io/github/v/release/gingerphoenix10/CWVR?style=for-the-badge&logo=github)](https://github.com/gingerphoenix10/CWVR/releases/latest)
+[![Thunderstore Downloads](https://img.shields.io/thunderstore/dt/gingerphoenix10/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/gingerphoenix10/CWVR)
+[![GitHub Downloads](https://img.shields.io/github/downloads/gingerphoenix10/CWVR/total?style=for-the-badge&logo=github)](https://github.com/gingerphoenix10/CWVR/releases/latest)
 <br>
 #### Original Mod
 [![Thunderstore Version](https://img.shields.io/thunderstore/v/DaXcess/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/DaXcess/CWVR)
