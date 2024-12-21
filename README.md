@@ -4,9 +4,6 @@
 [![GitHub Version](https://img.shields.io/github/v/release/gingerphoenix10/CWVR?style=for-the-badge&logo=github)](https://github.com/gingerphoenix10/CWVR/releases/latest)
 [![Thunderstore Downloads](https://img.shields.io/thunderstore/dt/DaXcess/CWVR?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/content-warning/p/DaXcess/CWVR)
 [![GitHub Downloads](https://img.shields.io/github/downloads/gingerphoenix10/CWVR/total?style=for-the-badge&logo=github)](https://github.com/gingerphoenix10/CWVR/releases/latest)
-<br/>
-[![Release Build](https://img.shields.io/github/actions/workflow/status/gingerphoenix10/CWVR/build-release.yaml?branch=main&style=for-the-badge&label=RELEASE)](https://github.com/gingerphoenix10/CWVR/actions/workflows/build-release.yaml)
-[![Debug Build](https://img.shields.io/github/actions/workflow/status/DaXcess/gingerphoenix10/build-debug.yaml?branch=dev&style=for-the-badge&label=DEBUG)](https://github.com/gingerphoenix10/CWVR/actions/workflows/build-debug.yaml)
 
 CW // VR is a [BepInEx](https://docs.bepinex.dev/) mod developed by [DaXcess](https://github.com/DaXcess) that adds fully fledged, 6DOF VR support into Content Warning, including fully motion controlled hands.
 
@@ -27,7 +24,7 @@ This means that updates to Content Warning itself can very easily break the mod,
 However, this fork is continuation of the project, allowing VR support on newer versions of Content Warning. This project is also planned to be uploaded to the official [Content Warning Workshop](https://steamcommunity.com/app/2881650/workshop/) eventually, if permission from DaXcess is given.
 
 > [!WARNING]
-> This project is not yet complete, and is still in development. Attempting to load this in it's current state will more than likely result in bugs. You can still try to if you want though :)
+> This project is still in beta, and may not work 100% as intended. However, everything has worked perfectly for me so far, so it's ready for release :)
 
 # Install from source
 
