@@ -1,4 +1,4 @@
-# 1.0.5
+# 1.0.5 (Labeled 1.0.0 on Thunderstore)
 - Project now maintained by gingerphoenix10
 - Added support for Content Warning version 1.19.e
 
